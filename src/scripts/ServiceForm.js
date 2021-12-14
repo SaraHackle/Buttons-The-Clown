@@ -19,6 +19,10 @@ export const ServiceForm = () => {
             <input type="number" name="serviceHours" class="input" />
         </div>
         <div class="field">
+        <label class="label" for="serviceAttendees"> How many people will be attending?</label>
+        <input type="number" name="serviceAttendees" class="input" />
+        </div>
+        <div class="field">
             <label class="label" for="serviceDate">Date needed</label>
             <input type="date" name="serviceDate" class="input" />
         </div>
@@ -45,6 +49,9 @@ mainContainer.addEventListener("click", (clickEvent) => {
     const userHours = document.querySelector(
       "input[name='serviceHours']"
     ).value;
+    const userAttendees = document.querySelector(
+        "input[name='serviceHours']"
+      ).value;
     const userDate = document.querySelector("input[name='serviceDate']").value;
 
     // Make an object out of the user input
@@ -53,6 +60,7 @@ mainContainer.addEventListener("click", (clickEvent) => {
       child: childDescription,
       address: userAddress,
       partyLength: userHours,
+      attendees: userAttendees,
       neededBy: userDate,
     };
 

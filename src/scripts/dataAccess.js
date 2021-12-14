@@ -5,7 +5,7 @@ const applicationState = {
 const API = "http://localhost:8088";
 
 export const fetchRequests = () => {
-  return fetch(`${API}/requests`)
+  return fetch(`${API}/requests?_sort=neededBy`)
     .then((response) => response.json())
     .then((serviceRequests) => {
       // Store the external state in application state
@@ -26,7 +26,7 @@ export const sendRequest = (userServiceRequest) => {
     body: JSON.stringify(userServiceRequest),
   };
 
-  return fetch(`${API}/requests`, fetchOptions)
+  return fetch(`${API}/requests?_sort=neededBy`, fetchOptions)
     .then((response) => response.json())
     .then(() => {
       document.dispatchEvent(new CustomEvent("stateChanged"));
