@@ -1,47 +1,29 @@
 {
-  "clowns": [],
-  "completions": [],
+  "clowns": [
+    {
+      "id": 1,
+      "clown": "Lollipop"
+    },
+    {
+      "id": 2,
+      "clown": "Buttons"
+    }
+  ],
+  "completions": [
+    {
+      "clownId": 2,
+      "requestId": 1,
+      "clownName": "Buttons",
+      "completionDate": "2021-12-23",
+      "requestChild": "Sally",
+      "requestLength": "6",
+      "id": 1
+    }
+  ],
   "requests": [
     {
-      "parent": "Mary and Joseph",
-      "child": "Steve",
-      "address": "123 Christmas Ln",
-      "partyLength": "10",
-      "neededBy": "2021-12-25",
-      "id": 2
-    },
-    {
-      "parent": "Nate",
-      "child": "Tater",
-      "address": "123 Long Dr",
-      "partyLength": "3",
-      "neededBy": "2022-01-27",
-      "id": 3
-    },
-    {
-      "parent": "Sam Samson",
-      "child": "Becky Samson",
-      "address": "500 Samson Dr",
-      "partyLength": "3",
-      "neededBy": "2024-02-27",
-      "id": 4
-    },
-    {
-      "parent": "Jacob Jacobson",
-      "child": "Jacob Jr",
-      "address": "345 Jacobsville Blvd",
-      "partyLength": "5",
-      "neededBy": "2023-06-27",
-      "id": 5
-    },
-    {
-      "parent": "Clayton ",
-      "child": "Claire",
-      "address": "900 Clown Please Ave",
-      "partyLength": "4",
-      "attendees": "4",
-      "neededBy": "2022-02-04",
-      "id": 6
+      "completed": true,
+      "id": 1
     }
   ]
 }

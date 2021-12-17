@@ -13,3 +13,7 @@
     text-emphasis: bold;
     margin:1em;
 }
+
+.booking__options{
+    list-style: none;
+}
