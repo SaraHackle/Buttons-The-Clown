@@ -50,8 +50,8 @@ mainContainer.addEventListener("click", (clickEvent) => {
       "input[name='serviceHours']"
     ).value;
     const userAttendees = document.querySelector(
-        "input[name='serviceHours']"
-      ).value;
+      "input[name='serviceHours']"
+    ).value;
     const userDate = document.querySelector("input[name='serviceDate']").value;
 
     // Make an object out of the user input
@@ -62,6 +62,7 @@ mainContainer.addEventListener("click", (clickEvent) => {
       partyLength: userHours,
       attendees: userAttendees,
       neededBy: userDate,
+      completed: false,
     };
 
     // Send the data to the API for permanent storage

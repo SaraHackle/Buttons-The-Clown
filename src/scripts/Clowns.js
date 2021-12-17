@@ -1,5 +1,6 @@
 import { Requests } from "./Requests.js";
 import { ServiceForm } from "./ServiceForm.js";
+import { Completions } from "./Completions.js"
 
 export const Clowns = () => {
   return `
@@ -9,8 +10,11 @@ export const Clowns = () => {
     </section>
     <section class="serviceRequests">
         <h2>Booking Requests</h2>
-        ${Requests()}
-        
+        ${Requests()}     
+    </section>
+    <section class="completedBookings">
+        <h2>Completed Requests</h2>
+        ${Completions()}
     </section>
     `;
 };

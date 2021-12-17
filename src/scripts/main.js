@@ -1,6 +1,6 @@
-import { fetchRequests } from "./dataAccess.js";
+import { deleteRequest, fetchRequests, fetchClowns,fetchCompletions } from "./dataAccess.js";
 import { Clowns } from "./Clowns.js";
-import { deleteRequest } from "./dataAccess.js";
+
 
 const mainContainer = document.querySelector("#container");
 
@@ -11,15 +11,18 @@ mainContainer.addEventListener("click", (click) => {
   }
 });
 
-document.addEventListener("stateChanged", (CustomEvent) => {
+mainContainer.addEventListener("stateChanged", (CustomEvent) => {
   render();
   return CustomEvent;
 });
 
 const render = () => {
-  fetchRequests().then(() => {
-    mainContainer.innerHTML = Clowns();
-  });
-};
-
-render();
+    fetchRequests()
+      .then(() => fetchClowns())
+      .then(() => fetchCompletions())
+      .then(() => {
+        mainContainer.innerHTML = Clowns();
+      });
+  };
+  
+  render();
